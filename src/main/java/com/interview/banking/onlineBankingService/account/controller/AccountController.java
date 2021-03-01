@@ -35,6 +35,11 @@ public class AccountController {
         return accountManagementService.getAccountDetails(accountId);
     }
 
+    @GetMapping("/getAccount/{accountNumber}")
+    public AccountDTO getAccountDetailsByNumber(@PathVariable("accountNumber") String accountNumber) {
+        return accountManagementService.getAccountDetailsByNumber(accountNumber);
+    }
+
     @PostMapping("/account")
     public AccountDTO createAccount(@RequestBody AccountDTO account) {
         return accountManagementService.createAccount(account);
