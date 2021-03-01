@@ -18,8 +18,6 @@ public class CustomerManagementService {
 
     @Value("${banking.customer_service}")
     private String CUSTOMER_SERVICE;
-    @Value("${banking.login_service}")
-    private String LOGIN_SERVICE;
 
     public CustomerDTO getCustomerDetails(String customerId) {
         String url = CUSTOMER_SERVICE + "/customer/" + customerId;
